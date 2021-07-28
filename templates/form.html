@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+    <div class="wrapper">
+    <h1>Add Task</h1>
+    <form method="POST" >
+        <div class="form__fieldset">
+            <label for="task" class="form__label">Task:</label>
+            <input type="text" name="task" id="task" class="form__input" />
+        </div>
+
+        <div>
+            <label for="deadline" class="form__label">Deadline:</label>
+            <input type="date" name="deadline" id="deadline" class="form__input" />
+        </div>
+
+        <!-- <div class="form__fieldset">
+            <label for="user" class="form__label">User:</label>
+            <select name="user" id="user" class="form__input form__select">
+                <option value="Akash">Akash</option>
+                <option value="Ashish">Ashish</option>
+                <option value="Gautam">Gautam</option>
+            </select>
+        </div> -->
+
+        <div class="form__fieldset">
+            <a href="/tasks">View all tasks</a>
+            <input class="form__submit form__input" type="submit" value="Add task" />
+        </div>
+    </form>
+    </div>
+
+</body>
+
+{% endblock %}

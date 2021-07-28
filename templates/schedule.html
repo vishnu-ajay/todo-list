@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+
+<div class="wrapper">
+    <h1>Schedule</h1>
+    <ol>
+    {% for entry in entries %} 
+        <li>
+            <div>
+                <form method="POST">
+                {{ entry[0] }} on {{ entry[1] }}
+                <!-- <input class="form__submit form__input" type="submit" value="Delete" /> -->
+                </form>
+            </div>
+        </li> 
+    {% endfor %}
+    </ol>
+    <p><a href="/">Add more tasks</a></p>
+</div>
+</body>
+
+{% endblock %}
